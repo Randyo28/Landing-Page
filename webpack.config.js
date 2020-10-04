@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
@@ -16,8 +17,8 @@ compress.unused = true;
 module.exports = env => {
 	return {
 		entry: {
-			FirstComp: './assets/js/components/FirstComp.js',
-			SApp: './assets/js/components/svelte/SvelteApp.js',
+			// FirstComp: './assets/js/components/FirstComp.js',
+			// SApp: './assets/js/components/svelte/SvelteApp.js',
 			main: './assets/js/main.js'
 		},
 		output: {

@@ -1,4 +1,4 @@
-
+/*jshint esversion: 6 */ 
   let tl = gsap.timeline();
 
   tl.fromTo('.logo-area',{
