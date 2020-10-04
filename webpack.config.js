@@ -22,7 +22,7 @@ module.exports = env => {
 			main: './assets/js/main.js'
 		},
 		output: {
-			path: path.resolve(__dirname, 'public/js/dist'),
+			path: path.resolve(__dirname, 'public/js'),
 			filename: '[name].js'
 		},
 		resolve: {
