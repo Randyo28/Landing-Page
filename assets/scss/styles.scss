@@ -13,12 +13,12 @@ body {
 }
 
 #bg {
-  .code-bg {
-    padding: 410px 0;
-    // background: url("/img/grey-bg.jpg") center fixed no-repeat;
-    // background-size: cover;
-    // background-position: center;
-  }
+  // .code-bg {
+  //   padding: 410px 0;
+  //   // background: url("/img/grey-bg.jpg") center fixed no-repeat;
+  //   // background-size: cover;
+  //   // background-position: center;
+  // }
 
   .logo-area {
     float: left;
@@ -36,18 +36,18 @@ body {
     }
   }
 
-  ul {
+  .header-list {
     float: right;
     display: flex;
     text-decoration: none;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     left: 20;
     padding: 20px 0;
 
     li {
-      padding: 0 55px 7px;
+      padding: 0 28px;
 
       a {
         text-decoration: none;
@@ -76,9 +76,9 @@ body {
   }
 
   .info-area {
-    position: absolute;
+    position: fixed;
     top: 323px;
-    left: 80px;
+    left: 20px;
 
     .connect {
       font-size: 55px;
@@ -175,8 +175,8 @@ body {
     position: absolute;
     width: 100px;
     height: 120px;
-    transform: translate3d(1230px, -220px, 0);
-    border: 1px dashed white;
+    transform: translate3d(1190px, 126px, 0);
+    border: 1px solid white;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   }
 
@@ -187,8 +187,8 @@ body {
     position: absolute;
     width: 100px;
     height: 120px;
-    transform: translate3d(700px, 370px, 0);
-    border: 1px dashed white;
+    transform: translate3d(700px, 648px, 0);
+    border: 1px solid white;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   }
 
@@ -202,3 +202,53 @@ body {
     left: 328px;
   }
 }
+
+@media screen and (max-width: 375px){
+  #bg .header-list{
+    float: right;
+    display: flex;
+    text-decoration: none;
+    position: fixed;
+    left:535;
+    padding: 20px 0;
+    }
+
+    #bg .girl{
+    width: 72%;
+    height: 68vh;
+    position: absolute;
+    top: 122px;
+    object-fit: cover;
+    object-position: top;
+    transition: filter 0.4s ease-in-out;
+    left: 708px;
+    }
+
+    #bg .marketing {
+      width: 72%;
+      height: 68vh;
+      position: absolute;
+      top: 450px;
+      left: 900px;
+      z-index: 2;
+      object-fit: cover;
+      object-position: top;
+      transition: filter 0.4s ease-in-out;
+    }
+
+    #bg .shape-2{
+      border: 2px dashed white;
+      background-color: #CDCDBC;
+      position: absolute;
+      width: 100px;
+      height: 120px;
+      transform: translate3d(678px, 726px, 0);
+      border: 1px solid white;
+      -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+
+}
+
+
