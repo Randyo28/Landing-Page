@@ -40,7 +40,7 @@ body {
     float: right;
     display: flex;
     text-decoration: none;
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 0;
     left: 20;
@@ -76,7 +76,7 @@ body {
   }
 
   .info-area {
-    position: fixed;
+    position: absolute;
     top: 323px;
     left: 20px;
 
@@ -144,7 +144,7 @@ body {
     right: 293px;
     z-index: 1;
     object-fit: cover;
-    object-position: top;
+    object-position: middle;
     transition: filter 0.4s ease-in-out;
 
     &:hover {
@@ -160,7 +160,7 @@ body {
     right: 45px;
     z-index: 2;
     object-fit: cover;
-    object-position: top;
+    object-position: middle;
     transition: filter 0.4s ease-in-out;
 
     &:hover {
@@ -187,7 +187,7 @@ body {
     position: absolute;
     width: 100px;
     height: 120px;
-    transform: translate3d(700px, 648px, 0);
+    transform: translate3d(714px, 715px, 0);
     border: 1px solid white;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   }
@@ -199,19 +199,302 @@ body {
     border-radius: 50%;
     position: absolute;
     top: 200px;
-    left: 328px;
+    left: 525px;
   }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 1200px){
+  #bg .logo-area{
+    float: left;
+    padding: 20px 40px;
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    .logo-name{
+      font-size:25px;
+    }
+  }
+  #bg .girl{
+    width: 27%;
+    height: 68vh;
+    position: absolute;
+    z-index:1;
+    top: 122px;
+    object-fit: cover;
+    object-position: middle;
+    transition: filter 0.4s ease-in-out;
+    right: 191px;
+    }
+
+   #bg .marketing {
+      width: 27%;
+      height: 68vh;
+      position: absolute;
+      top: 450px;
+      right: 45px;
+      z-index: 2;
+      object-fit: cover;
+      object-position: middle;
+      transition: filter 0.4s ease-in-out;
+    }
+
+    #bg .header-list {
+      float: right;
+      display: -ms-flexbox;
+      display: flex;
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      left: 20;
+      padding: 20px 0;
+      right: -82px;
+  }
+
+    #bg .shape-1 {
+      opacity: 0.9;
+      border: 2px dashed white;
+      background-color: #CDCDBC;
+      position: absolute;
+      width: 100px;
+      height: 120px;
+      transform: translate3d(1095px, 126px, 0);
+      border: 1px solid white;
+      -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+      #bg .shape-2 {
+        opacity: 0.9;
+        border: 2px dashed white;
+        background-color: #CDCDBC;
+        position: absolute;
+        width: 100px;
+        height: 120px;
+        transform: translate3d(637px, 682px, 0);
+        border: 1px solid white;
+        -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+
+    #bg .shape-3 {
+      height: 85px;
+      width: 85px;
+      background-color: beige;
+      border-radius: 50%;
+      position: absolute;
+      top: 200px;
+      left: 455px;
+      }
+  }
+
+  @media screen and (max-width: 992px) {
+    #bg .header-list {
+      float: right;
+      display: -ms-flexbox;
+      display: flex;
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      left: 20;
+      padding: 20px 0;
+      right: -221px;
+  }
+
+  #bg .girl{
+    width: 27%;
+    height: 68vh;
+    position: absolute;
+    z-index:1;
+    top: 122px;
+    object-fit: cover;
+    object-position: middle;
+    transition: filter 0.4s ease-in-out;
+    right: 49px;
+        }
+
+       #bg .marketing {
+          width: 27%;
+          height: 68vh;
+          position: absolute;
+          top: 450px;
+          right: -100px;
+          z-index: 2;
+          object-fit: cover;
+          object-position: middle;
+          transition: filter 0.4s ease-in-out;
+        }
+
+        #bg .shape-1 {
+          opacity: 0.9;
+          border: 2px dashed white;
+          background-color: #CDCDBC;
+          position: absolute;
+          width: 100px;
+          height: 120px;
+          transform: translate3d(997px, 126px, 0);
+          border: 1px solid white;
+          -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            }
+        
+        #bg .shape-2 {
+          opacity: 0.9;
+          border: 2px dashed white;
+          background-color: #CDCDBC;
+          position: absolute;
+          width: 100px;
+          height: 120px;
+          transform: translate3d(617px, 550px, 0);
+          border: 1px solid white;
+          -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+    }
+
+
+  @media screen and (max-width: 768px) {
+    #bg .header-list {
+      float: right;
+      display: -ms-flexbox;
+      display: flex;
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      left: 20;
+      padding: 20px 0;
+      right: -428px;
+  }
+  #bg .girl{
+    width: 27%;
+    height: 38vh;
+    position: absolute;
+    z-index:1;
+    top: 122px;
+    object-fit: cover;
+    object-position: middle;
+    transition: filter 0.4s ease-in-out;
+    right: -105px;
+        }
+  #bg .marketing {
+      width: 27%;
+      height: 38vh;
+      position: absolute;
+      top: 450px;
+      right: -235px;
+      z-index: 2;
+      object-fit: cover;
+      object-position: middle;
+      transition: filter 0.4s ease-in-out;
+        }
+  }
+
+  @media screen and (max-width: 600px){
+    #bg .header-list {
+      float: right;
+      display: -ms-flexbox;
+      display: flex;
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      left: 20;
+      padding: 20px 0;
+      right: -495px;
+  }
+
+  #bg .girl {
+    width: 27%;
+    height: 54vh;
+    position: absolute;
+    z-index: 1;
+    top: 186px;
+    object-fit: cover;
+    object-position: middle;
+    transition: filter 0.4s ease-in-out;
+    right: -105px;
+}
+
+#bg .shape-1 {
+  opacity: 0.9;
+  border: 2px dashed white;
+  background-color: #CDCDBC;
+  position: absolute;
+  width: 100px;
+  height: 120px;
+  transform: translate3d(806px, 170px, 0);
+  border: 1px solid white;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+  #bg .shape-2 {
+    opacity: 0.9;
+    border: 2px dashed white;
+    background-color: #CDCDBC;
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    transform: translate3d(495px, 548px, 0);
+    border: 1px solid white;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+#bg .shape-3 {
+  height: 85px;
+  width: 85px;
+  background-color: beige;
+  border-radius: 50%;
+  position: absolute;
+  top: 200px;
+  left: 391px;
+}
+
+  }
+
+
+@media screen and (max-width: 376px){
+  #bg .logo-area{
+    float: left;
+    padding: 20px 40px;
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    .logo-name{
+      font-size:25px;
+    }
+  }
+
   #bg .header-list{
     float: right;
     display: flex;
     text-decoration: none;
-    position: fixed;
     left:535;
     padding: 20px 0;
+    position: absolute;
     }
+
+    #bg .info-area {
+      position: fixed;
+      top: 323px;
+      left: 20px;
+    }
+    #bg .connect {
+      font-size: 35px !important;
+      font-family: 'Roboto';
+      // transform:rotate(-6deg);
+    }
+
+    #bg .new {
+      font-size: 15px !important;
+      padding-top: 20px;
+      font-family: 'Roboto';
+    }
+
 
     #bg .girl{
     width: 72%;
