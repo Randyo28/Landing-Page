@@ -241,7 +241,7 @@ const mobile = () => {
 
   tl.fromTo('.shape3',{
     y:400,
-    x:-50
+    x:-90
   },{
     y:350,
     duration: 1.5,
