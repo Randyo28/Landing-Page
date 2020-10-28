@@ -76,16 +76,19 @@ const initialPageAnimation = () => {
   ">-1"
   );
       //Shape1
-  tl.fromTo('.shape1',{
-    scale: 0,
-    opacity: 0
-  },{
-    scale: 1,
-    opacity: 0.3,
-    ease:'power2.inOut'
-  },
-  ">-1"
-  );
+      tl.fromTo('.shape1',{
+        x: -200,
+        opacity:0
+      },{
+        x: -100,
+        opacity: 0.3,
+        duration:1.5,
+        yoyo: true,
+        ease:'sine.inOut',
+        repeat: -1,
+      },
+      ">-1"
+      );
 
       //Shape3
   tl.fromTo('.shape3',{
