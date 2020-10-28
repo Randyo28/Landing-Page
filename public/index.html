@@ -2,47 +2,67 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing-Page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="manifest" href="/manifest.json"> -->
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body>
-  <!--Main-area --->
-  <section id="bg">
-    <div class="code-bg">
-      <!--Header-area --->
-      <header class="header">
-        <div class="logo-area">
-          <a href="#" class="logo-name">Analytic Solutions</a>
-        </div>
-        <ul class="header-list">
-          <li> <a href="#">Home</a></li>
-          <li> <a href="#">About</a></li>
-          <li> <a href="#">Services</a></li>
-          <li> <a href="#" class="menu-btn">Sign-up</a></li>
-        </ul>
-      </header>
-      <div class="info-area stag">
-        <h3 class="connect stag">Let Us Help You Connect!</h3>
-        <h3 class="new stag">New Clients & New Relationships</h3>
-        <div class="call-actions stag">
-          <a href="#" class="action-btn stag">Give us a Call</a>
-          <a href="#" class="action-ghost-btn stag">More Info</a>
-        </div>
-      </div>
-      <div class="photos">
-        <img class="girl" src="/img/girl.jpg" />
-        <img class="marketing" src="/img/marketing.jpg" />
-        <div class="shape-1"></div>
-        <div class="shape-2"></div>
-        <div class="shape-3"></div>
-      </div>
+  <div class="loading-bg"></div>
+  <header>
+    <div class="logo">
+      <a href="index.html">Analytic Solutions</a>
     </div>
-  </section>
+    <div class="menu">
+      <ul id="navbar">
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="#" class="menu-btn">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+    <div class="ham-container" onclick="navBar(), myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </header>
+  <main>
+    <section id="home" class="panel">
+      <div class="container">
+        <div class="content-area">
+          <div class="info-section">
+            <h1>Let Us Help You Connect!</h1>
+            <h4>New Clients & New Relationships</h4>
+            <div class="call-actions">
+              <a href="#" class="action-btn">Give us a Call</a>
+              <a href="#" class="action-ghost-btn">More Info</a>
+            </div>
+          </div>
+          <div class="photos">
+            <img class="girl" src="img/girl.jpg">
+            <img class="marketing" src="img/marketing.jpg">
+            <div class="shape1"></div>
+            <div class="shape2"></div>
+            <div class="shape3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
