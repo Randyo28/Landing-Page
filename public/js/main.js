@@ -1,7 +1,4 @@
-
-      //Nav-bar//
-
-
+     //Nav-bar//
       function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
       }
@@ -10,23 +7,6 @@
         document.getElementById("mySidenav").style.width = "0";
       }
 
-
-
-  //     function navBar() {
-  //       var x = document.getElementById("navbar");
-  //       if (x.style.display === "flex") {
-  //           x.classList.toggle("change");
-  //           x.style.display = "none";
-  //   } else {
-  //           x.style.display = "flex";
-  //           }
-  //         }
-  
-  
-  //           //Hamburger-transition
-  //         function myFunction(x) {
-  //   x.classList.toggle("change");
-  // }
 
 /* Page transitions Animations */
 
@@ -591,7 +571,44 @@ const mobile = () => {
   );
 };
 
-if (window.screen.width <= 375){
+const loadingLeave = () => {
+  let timeline = gsap.timeline();
+  timeline.fromTo('.loading-bg', {
+    y: "100%",
+    // opacity:1,
+    background: 'blue'
+  }, {
+    y: 0,
+    // opacity:0,
+    background: 'white',
+    ease:'sine.inOut',
+    duration: 1
+  });
+};
+
+const loadingEnter = () => {
+  let timeline = gsap.timeline();
+  timeline.fromTo('.loading-bg', {
+    y: 0,
+    background: 'white',
+  }, {
+    y: "100%",
+    background: 'blue',
+    duration: 1
+  });
+};
+
+const delay = (n) => {
+  return new Promise((done) =>{
+    setTimeout(() =>{
+      done();
+    }, n);
+  });
+};
+
+
+const mobileViews = () => {
+  if (window.screen.width <= 375){
   mobile();
 } else if(window.screen.width <= 500){
   midScreen500();
@@ -599,4 +616,127 @@ if (window.screen.width <= 375){
   midScreen500();
 }else{
   initialPageAnimation();
+  }
 }
+
+
+barba.init({
+  sync: true,
+  transitions: [{
+      name:'page-wipe',
+      async leave(data){
+        const done = this.async();
+        console.log('leaving page animation');
+        loadingLeave();
+        await delay(2000);
+        done();
+      },
+      async enter(data){
+        mobileViews();
+        console.log('Entering page animation');
+        loadingEnter();
+
+      },
+    //   async once(data){
+    //     initialPageAnimation();
+    //   }
+    },
+    {
+        name:'gallery-transition',
+        from: {
+          namespace: ['home','about']
+        },
+        to: {
+          namespace: ['gallery']
+        },
+        async leave(data){
+          const done = this.async();
+          console.log('leaving page animation');
+          loadingLeave();
+          await delay(2000);
+          done();
+        },
+        async enter(data){
+          console.log('Entering page animation');
+          // galleryEnter();
+          loadingEnter();
+
+        }
+      },
+
+      {
+          name:'home-transition',
+          from: {
+            namespace: ['about','gallery']
+          },
+          to: {
+            namespace: ['home']
+          },
+          async leave(data){
+            const done = this.async();
+            console.log('leaving page animation');
+            loadingLeave();
+            await delay(2000);
+            done();
+          },
+          async enter(data){
+            console.log('Entering page animation');
+            mobileViews();
+            loadingEnter();
+
+          }
+        },
+      {
+      name:'about-transition',
+      from: {
+        namespace: ['home','gallery']
+      },
+      to: {
+        namespace: ['about']
+      },
+      async leave(data){
+        const done = this.async();
+        console.log('leaving page animation');
+        loadingLeave();
+        await delay(2000);
+        done();
+      },
+      async enter(data){
+        console.log('Entering page animation');
+        // aboutPageAnimation();
+        loadingEnter();
+
+      }
+    }
+
+  ],
+    views: [
+  //     {
+  //   namespace: 'home',
+  //   beforeLeave(data) {
+  //     //do something before leaving the current `index` namespace
+  //   }
+  // },
+  {
+   namespace: 'home',
+   afterEnter(data) {
+    mobileViews();
+     loadingEnter();
+   }
+ },
+//   {
+//    namespace: 'about',
+//    afterEnter(data) {
+//      aboutPageAnimation();
+//      loadingEnter();
+//    }
+//  },
+//    {
+//     namespace: 'gallery',
+//     afterEnter(data) {
+//       galleryEnter();
+//       loadingEnter();
+//     }
+//   }
+]
+});

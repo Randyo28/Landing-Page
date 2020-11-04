@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body data-barba="wrapper">
+  <div class="loading-bg"></div>
+  <header>
+    <div class="logo">
+      <a href="index.html">Analytic Solutions</a>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <!-- <a href="#">Services</a> -->
+        <a href="#">Clients</a>
+      </div>
+      <div class="ham-container" onclick="openNav()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+  </header>
+  <main data-barba="container" data-barba-namespace="about">
+    <section id="about">
+      <div class="container">
+        <div class="content-area">
+          <div class="info-section">
+            <h1>About Us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus doloribus ex at cum eum expedita nisi labore voluptate, numquam ut commodi aliquid repellendus porro quasi architecto dolor natus. Iste, enim.</p>
+            <img class="grid-pic" src="img/business-team.jpg">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
